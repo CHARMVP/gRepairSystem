@@ -7,7 +7,7 @@ import com.ruoyi.web.domain.Device;
  * 设备信息Service接口
  *
  * @author guo
- * @date 2021-12-21
+ * @date 2021-12-22
  */
 public interface IDeviceService
 {

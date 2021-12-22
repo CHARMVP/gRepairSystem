@@ -3,10 +3,13 @@ package com.ruoyi.web.controller;
 import java.util.List;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import com.ruoyi.common.annotation.Log;
 import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.web.domain.Device;
@@ -20,21 +23,12 @@ import com.ruoyi.common.core.page.TableDataInfo;
  * 设备信息Controller
  *
  * @author guo
- * @date 2021-12-21
+ * @date 2021-12-22
  */
 @Controller
 @RequestMapping("/repair-system/device")
 public class DeviceController extends BaseController
 {
-    /**
-     * 测试
-     */
-    @GetMapping("/test")
-    public String test()
-    {
-        return "main";
-    }
-
     private String prefix = "repair-system/device";
 
     @Autowired

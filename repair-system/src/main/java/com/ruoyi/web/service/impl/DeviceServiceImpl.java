@@ -1,19 +1,18 @@
 package com.ruoyi.web.service.impl;
 
 import java.util.List;
-
-import com.ruoyi.web.domain.Device;
-import com.ruoyi.web.mapper.DeviceMapper;
-import com.ruoyi.web.service.IDeviceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.ruoyi.web.mapper.DeviceMapper;
+import com.ruoyi.web.domain.Device;
+import com.ruoyi.web.service.IDeviceService;
 import com.ruoyi.common.core.text.Convert;
 
 /**
  * 设备信息Service业务层处理
  *
  * @author guo
- * @date 2021-12-21
+ * @date 2021-12-22
  */
 @Service
 public class DeviceServiceImpl implements IDeviceService

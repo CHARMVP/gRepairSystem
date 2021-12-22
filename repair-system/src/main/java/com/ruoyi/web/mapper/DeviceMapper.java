@@ -2,13 +2,12 @@ package com.ruoyi.web.mapper;
 
 import java.util.List;
 import com.ruoyi.web.domain.Device;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * 设备信息Mapper接口
  *
  * @author guo
- * @date 2021-12-21
+ * @date 2021-12-22
  */
 public interface DeviceMapper
 {

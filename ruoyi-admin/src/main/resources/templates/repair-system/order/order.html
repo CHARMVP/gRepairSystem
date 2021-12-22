@@ -24,15 +24,24 @@
                                 <span>-</span>
                                 <input type="text" class="time-input" id="endTime" placeholder="结束时间" name="params[endSubmitTime]"/>
                             </li>
+<!--                            <li class="select-time">-->
+<!--                                <label>维修开始时间：</label>-->
+<!--                                <input type="text" class="time-input" id="startTime" placeholder="开始时间" name="params[beginRepairStartTime]"/>-->
+<!--                                <span>-</span>-->
+<!--                                <input type="text" class="time-input" id="endTime" placeholder="结束时间" name="params[endRepairStartTime]"/>-->
+<!--                            </li>-->
+<!--                            <li class="select-time">-->
+<!--                                <label>维修结束时间：</label>-->
+<!--                                <input type="text" class="time-input" id="startTime" placeholder="开始时间" name="params[beginRepairEndTime]"/>-->
+<!--                                <span>-</span>-->
+<!--                                <input type="text" class="time-input" id="endTime" placeholder="结束时间" name="params[endRepairEndTime]"/>-->
+<!--                            </li>-->
+                            <!-- 去除多余的筛选条件 -->
                             <li class="select-time">
-                                <label>维修开始时间：</label>
+                                <label>维修时间：</label>
                                 <input type="text" class="time-input" id="startTime" placeholder="开始时间" name="params[beginRepairStartTime]"/>
-                                <span>-</span>
-                                <input type="text" class="time-input" id="endTime" placeholder="结束时间" name="params[endRepairStartTime]"/>
-                            </li>
-                            <li class="select-time">
-                                <label>维修结束时间：</label>
-                                <input type="text" class="time-input" id="startTime" placeholder="开始时间" name="params[beginRepairEndTime]"/>
+<!--                            </li>-->
+<!--                            <li class="select-time">-->
                                 <span>-</span>
                                 <input type="text" class="time-input" id="endTime" placeholder="结束时间" name="params[endRepairEndTime]"/>
                             </li>
@@ -51,7 +60,7 @@
 
             <div class="btn-group-sm" id="toolbar" role="group">
                 <a class="btn btn-success" onclick="$.operate.add()" shiro:hasPermission="repair-system:order:add">
-                    <i class="fa fa-plus"></i> 添加
+                    <i class="fa fa-plus"></i> 报修
                 </a>
                 <a class="btn btn-primary single disabled" onclick="$.operate.edit()" shiro:hasPermission="repair-system:order:edit">
                     <i class="fa fa-edit"></i> 修改

@@ -6,13 +6,12 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ruoyi.common.annotation.Excel;
 import com.ruoyi.common.core.domain.BaseEntity;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * 设备信息对象 device
  *
  * @author guo
- * @date 2021-12-21
+ * @date 2021-12-22
  */
 public class Device extends BaseEntity
 {
