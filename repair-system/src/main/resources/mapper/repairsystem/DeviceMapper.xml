@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.guo.repairsystem.mapper.DeviceMapper">
-    
+<mapper namespace="com.ruoyi.web.mapper.DeviceMapper">
+
     <resultMap type="Device" id="DeviceResult">
         <result property="id"    column="id"    />
         <result property="name"    column="name"    />
@@ -21,7 +21,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
     <select id="selectDeviceList" parameterType="Device" resultMap="DeviceResult">
         <include refid="selectDeviceVo"/>
-        <where>  
+        <where>
             <if test="name != null  and name != ''"> and name like concat('%', #{name}, '%')</if>
             <if test="buyTime != null "> and buy_time = #{buyTime}</if>
             <if test="productionLine != null  and productionLine != ''"> and production_line = #{productionLine}</if>
@@ -31,12 +31,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="supplierPhoneNumber != null "> and supplier_phone_number = #{supplierPhoneNumber}</if>
         </where>
     </select>
-    
+
     <select id="selectDeviceById" parameterType="Long" resultMap="DeviceResult">
         <include refid="selectDeviceVo"/>
         where id = #{id}
     </select>
-        
+
     <insert id="insertDevice" parameterType="Device" useGeneratedKeys="true" keyProperty="id">
         insert into device
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -78,7 +78,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </delete>
 
     <delete id="deleteDeviceByIds" parameterType="String">
-        delete from device where id in 
+        delete from device where id in
         <foreach item="id" collection="array" open="(" separator="," close=")">
             #{id}
         </foreach>
